@@ -39,7 +39,7 @@ export default class TuyaVirtualDevice extends BaseClass
     setupDevice(tuyaDevice)
     {
         this.tuyaLeds = DeviceList[tuyaDevice.deviceType].leds;
-        this.ledCount = (this.tuyaLeds.length > 4) ? 4 : this.tuyaLeds.length;
+        this.ledCount = this.tuyaLeds.length; 
 
         this.ledNames = this.getLedNames();
         this.ledPositions = this.getLedPositions();
